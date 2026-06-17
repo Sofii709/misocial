@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import { mkdirSync } from 'fs'
 import tailwindcss from '@tailwindcss/vite'
 import pugPlugin from '@macropygia/vite-plugin-pug-static'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 const createStructure = () => ({
   name: 'create-structure',
@@ -34,8 +35,13 @@ export default defineConfig({
   base: './',
 
   plugins: [
-    createStructure(), // ← додано
+    createStructure(),
     tailwindcss(),
+    viteStaticCopy({
+      targets: [
+        { src: 'assets/images/*', dest: 'assets/images' },
+      ],
+    }),
     pugPlugin({
       buildLocals: {
         siteName: 'site name',
@@ -66,6 +72,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.pug'),
+        app: resolve(__dirname, 'src/main.js'),
       },
       output: {
         assetFileNames: (assetInfo) => {

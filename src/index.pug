@@ -3,8 +3,17 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="styles/main.sass")
-        title Document
+        link(rel="stylesheet", href="assets/styles/style.sass")
+        title Misocial 
     body 
-        h1 Hello world
+        include components/mixins
+        header
+            +menu(navigationMenu)
+        main 
+            section 
+                h2 
+                .grid.col_3 
+                    +card(cardsInfo.satelite)
+                    +card(cardsInfo.machine)
+                    +card(cardsInfo.rocket)
         script(src="scripts/main.js") 
