@@ -3,6 +3,51 @@
 body
     margin: 0 
     box-sizing: border-box 
+    font-family: "Maven Pro"
+
+a 
+    text-decoration: none
+
+.items_center
+    align-items: center
+
+header
+    +gradient('../images/glasses.jpg')
+
+.flex_between
+    display: flex
+    justify-content: space-between
+
+.flex_nav, .flex_nav ul
+    display: flex
+    gap: 55px
+
+li 
+    list-style: none
+
+.logo span
+    text-transform: uppercase
+    font-size: 30px
+    letter-spacing: 6px
+    font-weight: bold
+
+.light,
+.dark
+    a
+        font-size: 16px
+        line-height: 19px
+        font-weight: 400
+
+
+.light
+    color: #fff
+    a
+        color: #fff
+
+.dark 
+    color: #121212
+    a 
+        color: #121212
  
 .grid
     display: grid
@@ -11,3 +56,22 @@ body
     grid-template-columns: 1fr
     +media(1024)
         grid-template-columns: repeat(3, 1fr)
+
+.center 
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.Misocial 
+    padding: 100px 0
+
+.bottom_line svg
+    width: 16px
+    height: 20px
+
+.bottom_line a 
+    color: transparent
+
+.space
+    display: flex
+    justify-content: space-between

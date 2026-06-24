@@ -9,7 +9,7 @@
 
 mixin menu(navigationMenu, colorTheme="light")
     .navigation.flex_between.items_center
-        .logo
+        .logo.items_center
             a(href="index.html") 
                 picture 
                     img(src="assets/images/logo.svg", alt="logo misocial")
@@ -94,3 +94,5 @@ mixin card(oneCard)
                 for item in oneCard.description 
                     li #{item} 
             a(href=oneCard.href) #{oneCard.btnText} 
+
+
