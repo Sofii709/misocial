@@ -11,8 +11,36 @@ a
 .items_center
     align-items: center
 
+.navigation 
+    padding: 10px
+
 header
     +gradient('../images/glasses.jpg')
+
+.picture
+    +gradient('../images/map.jpg')
+
+.social 
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 0.4rem
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: bold
+
+.Misocial 
+    h1
+        font-size: 86px
+        letter-spacing: -3px
+        color: #ffffff
+        margin: 0
+        font-weight: 400
+    h2 
+        font-size: 60px
+        letter-spacing: -2px
+        color: #ffffff
+        margin: 0
+        font-weight: 400
 
 .flex_between
     display: flex
@@ -31,12 +59,22 @@ li
     letter-spacing: 6px
     font-weight: bold
 
+.main_text
+    width: 387px
+    font-size: 16px
+    line-height: 1.7rem
+    color: #ffffff
+    text-align: center
+
 .light,
 .dark
     a
         font-size: 16px
         line-height: 19px
         font-weight: 400
+        transition: color 0.3s ease
+        &:hover
+            color: blue
 
 
 .light
@@ -63,7 +101,7 @@ li
     flex-direction: column
 
 .Misocial 
-    padding: 100px 0
+    padding: 90px 0px 200px
 
 .bottom_line svg
     width: 16px
@@ -75,3 +113,8 @@ li
 .space
     display: flex
     justify-content: space-between
+    opacity: 0.502
+    font-size: 14px
+    line-height: 0.9rem
+    color: #6a6a77
+    padding-top: 50px

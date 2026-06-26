@@ -4,15 +4,18 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="assets/styles/style.sass")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         title Misocial 
     body 
         include components/mixins
         header
             +menu(navigationMenu)
             .Misocial.center.wrapper
-                p social marketing and anlytics
+                p.social social marketing and anlytics
                 h1 Pricing Table
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                p.main_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
         main 
             section 
                 .center
@@ -23,8 +26,8 @@ html(lang="en")
                     +card(cardsInfo.satelite)
                     +card(cardsInfo.machine)
                     +card(cardsInfo.rocket)
-                .Misocial.center
-                    p SOCAL MARKETING & ANALYTICS
+                .Misocial.center.picture
+                    p.social SOCAL MARKETING & ANALYTICS
                     h2 Take control of your data
                     p 
                         a(href="#" class="btn") get started
