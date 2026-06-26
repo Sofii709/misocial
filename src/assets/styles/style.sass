@@ -8,6 +8,12 @@ body
 a 
     text-decoration: none
 
+.wrapper 
+    margin: 0 auto
+    width: 85%
+    +media(1920)
+        max-width: 1622px
+
 .items_center
     align-items: center
 
@@ -19,6 +25,18 @@ header
 
 .picture
     +gradient('../images/map.jpg')
+    p
+        display: flex
+        gap: 10px
+
+.Misocia
+    padding: 90px 0px 100px
+    h2 
+        font-size: 60px
+        letter-spacing: -2px
+        color: #ffffff
+        margin: 0
+        font-weight: 400
 
 .social 
     font-size: 14px
@@ -28,16 +46,37 @@ header
     color: #ffffff
     font-weight: bold
 
+.socially 
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 0.4rem
+    text-transform: uppercase
+    color: #9fa4af
+    font-weight: 400
+
+.main
+    padding-top: 90px
+    padding-bottom: 80px
+
+.main h2 
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 1,2rem
+    color: #4f4f6f
+    font-weight: 400
+    margin: 0
+
+.text 
+    width: 387px
+    font-size: 16px
+    line-height: 1.7rem
+    color:#9fa4af
+    text-align: center
+
 .Misocial 
     h1
         font-size: 86px
         letter-spacing: -3px
-        color: #ffffff
-        margin: 0
-        font-weight: 400
-    h2 
-        font-size: 60px
-        letter-spacing: -2px
         color: #ffffff
         margin: 0
         font-weight: 400
@@ -53,11 +92,16 @@ header
 li 
     list-style: none
 
-.logo span
-    text-transform: uppercase
-    font-size: 30px
-    letter-spacing: 6px
-    font-weight: bold
+.logo 
+    span
+        text-transform: uppercase
+        font-size: 30px
+        letter-spacing: 6px
+        font-weight: bold
+    a
+        display: flex
+        align-items: center
+        gap: 17px
 
 .main_text
     width: 387px
@@ -73,19 +117,43 @@ li
         line-height: 19px
         font-weight: 400
         transition: color 0.3s ease
-        &:hover
-            color: blue
 
 
 .light
     color: #fff
     a
         color: #fff
+    .btn
+        +btn($fixed: false, $empty: false)
 
 .dark 
     color: #121212
     a 
         color: #121212
+        &:hover
+            color: blue
+    .btn
+        +btn($fixed: false, $empty: true)
+
+.btn_purple 
+    +btn($fixed: false, $empty: true)
+
+.card 
+    text-align: center
+    margin-bottom: 120px
+    .personal
+        font-size: 14px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: #9fa4af
+        font-weight: bold
+    .description
+        padding: 0
+        min-height: 218px
+        font-size: 16px
+        line-height: 28px
+        color: #9fa4af
  
 .grid
     display: grid
@@ -117,4 +185,7 @@ li
     font-size: 14px
     line-height: 0.9rem
     color: #6a6a77
-    padding-top: 50px
+    padding: 50px 8px 0
+
+.btn 
+    +btn()
